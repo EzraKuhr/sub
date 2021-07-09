@@ -1,0 +1,6 @@
+{
+  "require": {
+    "twilio/sdk": "^5.29",
+    "laravel/installer": "^4.2"
+  }
+}
