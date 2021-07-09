@@ -17,7 +17,7 @@ class SubscribersTable extends Migration
             $table->increments('id');
             $table->string('contact', 45); 
             $table->boolean('is_admin')->default(0)->nullable();
-            $table->string('name', 32);
+            $table->string('name', 32)->nullable();
     	});
     }
 

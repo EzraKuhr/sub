@@ -4,10 +4,10 @@ Allows you to send out mass text messages to a list of subscribers.
 
 ### Installation
 
-1) Download zip of the repository.
+1) Download zip of the repository and unzip.
 2) Run `composer install` from inside the target dir
-3) Create a database `sub`
-4) Run `database.sql` on the `sub` database.
+3) Create a database `sub` and enter values for `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`
+4) Run `php artisan migrate`.
 5) Add the connection info for the database in `config.php`.
 6) Set up a twilio account.
 7) Add the twilio info in `config.php`.
