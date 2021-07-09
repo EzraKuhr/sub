@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'HomeController@show');
+Route::post('/', 'HomeController@storePhoneNumber');
+Route::post('/custom', 'HomeController@sendCustomMessage');
 
-Route::get('/', function () {
-    return view('welcome');
-});
