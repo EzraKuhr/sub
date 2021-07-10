@@ -15,4 +15,4 @@ use App\Http\Controllers\HomeController;
 Route::get('/', 'App\Http\Controllers\HomeController@show');
 Route::post('/', 'App\Http\Controllers\HomeController@storePhoneNumber');
 Route::post('/custom', 'App\Http\Controllers\HomeController@sendCustomMessage');
-
+Route::post('/subscribe', 'App\Htttp\Controllers\WebhookController@parseMessage');
