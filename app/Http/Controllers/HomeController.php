@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\UsersPhoneNumber;
 use Illuminate\Http\Request;
+use Twilio\Rest\Client;
 
 class HomeController extends Controller
 {
@@ -18,11 +21,11 @@ class HomeController extends Controller
     {
         //run validation on data sent in
         $validatedData = $request->validate([
-            'phone_number' => 'required|unique:users_phone_number|numeric'
+            'contact' => 'required|unique:subscribers|numeric'
         ]);
         $user_phone_number_model = new UsersPhoneNumber($request->all());
         $user_phone_number_model->save();
-        return back()->with(['success'=>"{$request->phone_number} registered"]);
+        return back()->with(['success'=>"{$request->contact} registered"]);
     }
 
     /**
